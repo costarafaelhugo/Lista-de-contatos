@@ -12,15 +12,18 @@ class ContactAdapter : RecyclerView.Adapter<ContactAdapter.ContactAdapterViewHol
         TODO("Not yet implemented")
     }
 
-    override fun onBindViewHolder(holder: ContactAdapterViewHolder, position: Int) {
-        TODO("Not yet implemented")
-    }
-
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return list.size
     }
 
-    class ContactAdapterViewHolder(itemView : View) : RecyclerView.ViewHolder (itemView) {
+    override fun onBindViewHolder(holder: ContactAdapterViewHolder, position: Int) {
+        holder.bind(list[position])
+    }
 
+
+    class ContactAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(contact : Contact) {
+
+        }
     }
 }
